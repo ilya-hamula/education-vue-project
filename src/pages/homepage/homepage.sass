@@ -1,0 +1,311 @@
+@import "../../assets/sass/base/reset"
+
+.home
+  height: 100vh
+  background: #1A233A
+  padding: 24px
+
+.btn-panel
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  background: #272E48
+  padding: 16px 24px
+  margin-bottom: 64px
+  box-shadow: -8px 12px 20px 0 rgba(11,26,51,.63)
+  border-radius: 4px
+  & button:not(:last-child)
+    margin-right: 16px
+  &__btn-add
+    display: inline-block
+    width: 180px
+    height: 40px
+    background: #5A8DEE
+    font-size: 18px
+    line-height: 40px
+    font-weight: 500
+    color: #fff
+    border: none
+    box-shadow: 0 2px 4px 0 rgba(90,141,238,.6)
+    border-radius: 6px
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      background: #719DF0
+
+.pup
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  background: rgba(0, 0, 0, 0.7)
+  opacity: 0
+  visibility: hidden
+  transition: all .3s
+  z-index: 9
+  &.visible
+    opacity: 1
+    visibility: visible
+  &__close
+    position: absolute
+    top: 16px
+    right: 16px
+    width: 20px
+    height: 20px
+    cursor: pointer
+    transition: all .3s
+    &:hover
+      transform: scale(1.2)
+  &__inner
+    width: 600px
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: #272E48
+    padding: 60px 0
+    box-shadow: -8px 12px 20px 0 rgba(11,26,51,.63)
+    border-radius: 4px
+    position: relative
+  &__title
+    font-size: 24px
+    line-height: 34px
+    font-weight: 500
+    color: #BDD1F8
+    text-transform: uppercase
+    margin-bottom: 32px
+  &__form
+    display: flex
+    flex-direction: column
+    width: 300px
+  &__input
+    width: 100%
+    height: 40px
+    background: #b0b9d8
+    font-size: 13px
+    line-height: 23px
+    color: #000
+    border: none
+    box-shadow: -8px 12px 20px 0 rgba(11,26,51,.63)
+    border-radius: 6px
+    padding-left: 16px
+    margin-bottom: 24px
+    &::placeholder
+      color: #424242
+  &__datepicker
+    & input
+      width: 100%
+      height: 40px
+      background: #b0b9d8
+      font-size: 13px
+      line-height: 23px
+      color: #000
+      border: none
+      box-shadow: -8px 12px 20px 0 rgba(11,26,51,.63)
+      border-radius: 6px
+      padding-left: 16px
+      margin-bottom: 24px
+      cursor: pointer
+  &__btn
+    display: inline-block
+    width: 100%
+    height: 40px
+    background: #5A8DEE
+    font-size: 18px
+    line-height: 40px
+    font-weight: 500
+    color: #fff
+    border: none
+    box-shadow: 0 2px 4px 0 rgba(90,141,238,.6)
+    border-radius: 6px
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      background: #719DF0
+
+  &-succ
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: #272E48
+    padding: 60px 0
+    box-shadow: -8px 12px 20px 0 rgba(11,26,51,.63)
+    opacity: 0
+    visibility: hidden
+    &.visible
+      opacity: 1
+      visibility: visible
+    &__text-block
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      margin-bottom: 64px
+    &__text
+      font-size: 24px
+      line-height: 34px
+      font-weight: 500
+      color: #BDD1F8
+      text-transform: uppercase
+    &__icon
+      width: 20px
+      height: 20px
+      margin-left: 8px
+      margin-top: -2px
+    &__btn
+      display: inline-block
+      width: 200px
+      height: 40px
+      background: #5A8DEE
+      font-size: 18px
+      line-height: 40px
+      font-weight: 500
+      color: #fff
+      text-transform: uppercase
+      border: none
+      box-shadow: 0 2px 4px 0 rgba(90,141,238,.6)
+      border-radius: 6px
+      transition: all .3s
+      cursor: pointer
+      &:hover
+        background: #719DF0
+
+  & .calender-div
+    width: 100%
+  & .year-month-wrapper,
+  & .nav-l,
+  & .nav-r
+    height: 40px
+    background: #272E48
+  & .nav-l:hover,
+  & .nav-r:hover
+    background: #3c466d
+  & .days
+    color: #272E48
+  & .port:hover
+    color: #272E48
+  & .activePort
+    background: #272e48
+    &:hover
+      background: #151927
+      color: #fff
+  & .showSelector .active
+    background: #272e48
+  & .okButton
+    color: #272e48
+    &:hover
+      text-decoration: underline
+
+.table
+  border-radius: 4px
+  overflow: hidden
+  &__edit-btn
+    width: 40px
+    height: 40px
+    opacity: .5
+    transition: all .3s
+    &:hover
+      opacity: 1
+      transform: scale(1.3)
+  &__homework-btn
+    width: 25px
+    height: 25px
+    opacity: .5
+    transition: all .3s
+    &:hover
+      opacity: 1
+      transform: scale(1.3)
+  &__switch-text
+    display: inline-block
+    min-width: 55px
+    font-size: 14px
+    line-height: 20px
+    text-align: left
+    &--planned
+      color: #f3f3f3
+  & .md-table
+    background: #272E48
+    box-shadow: -8px 12px 20px 0 rgba(11,26,51,.63)
+  & .md-table-content
+    height: auto!important
+    max-height: 100%!important
+    background: transparent!important
+  & .md-table-fixed-header
+    border-bottom: 2px solid #1A233A
+  & .md-table-row
+    &:not(:last-child)
+      border-bottom: 2px solid #1A233A
+  & .md-table-head
+    text-align: center
+  & .md-table-head-label
+    font-size: 20px
+    line-height: 30px
+    color: #BDD1F8
+  & .md-table-cell-container
+    font-size: 16px
+    line-height: 40px
+    color: #f3f3f3
+    padding: 9px 24px
+  & .md-field
+    margin: 0!important
+  & .md-input
+    color: #B3C0CE!important
+    -webkit-text-fill-color: #B3C0CE!important
+    opacity: 0.5
+    &:focus
+      opacity: 1
+    &::placeholder
+      color: #BDD1F8!important
+  & .md-table-sortable-icon svg
+    fill: #B3C0CE!important
+  & .md-checkbox
+    height: 58px
+    align-items: center
+    justify-content: center
+  & .md-checkbox-container
+    border-color: #131313!important
+  & .md-selected
+    background-color: #3f4a73!important
+  & .md-checked .md-checkbox-container
+    background-color: #000!important
+  & .md-table-alternate-header .md-toolbar
+    background-color: #343e61!important
+  & .md-icon-button-del
+    &:before
+      display: none
+    & .md-icon
+      color: red!important
+      opacity: .3!important
+      transition: all .3s!important
+      &:hover
+        opacity: .7!important
+        transform: scale(1.3)
+  & .md-table-cell-btn
+    width: 100px
+  & .md-switch
+    margin:  16px 0
+  & .md-switch-thumb
+    background-color: #5f5f5f!important
+  & .md-checked .md-switch-thumb
+    background-color: #ff5252!important
+  & .past
+    & .md-table-cell-date .md-table-cell-container
+      text-decoration: line-through
+  & .future
+    background: #354163
+  & .today
+    background: #3f61a0
+    border-bottom: 2px solid red!important
+
+  & .del
+    transition: all .5s
+    transform: translateX(1000px)
